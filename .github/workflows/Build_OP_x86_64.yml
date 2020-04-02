@@ -4,15 +4,15 @@
 # Author: veni
 #=================================================
 
-name: Build_x86_64
+name: Build_x86_64_0402
 
 on: 
   release:
     types: [published]
 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 8 * * 5
@@ -69,7 +69,7 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: Configuration Customization - Build_x86_64
+    - name: Configuration Customization - Build_x86_64_0402
       env:
         CONFIG_FILE: 'x86_64.config'
       run: |
